@@ -143,23 +143,36 @@ def leer_json(texto):
     return datos
 
 
-def validar_series(datos, log):
-    """Comprueba que lleguen las 4 series pedidas, en orden, verificando su nombre oficial."""
+def emparejar_series(datos, log):
+    """Relaciona cada serie devuelta con su código usando el nombre oficial.
+
+    La API no devuelve los códigos ni respeta el orden en que se piden, así que
+    el orden de llegada no puede usarse para identificar las series.
+    Devuelve los nombres finales en el orden en que llegaron los valores.
+    """
     series_api = datos["config"].get("series", [])
     if len(series_api) != len(SERIES):
         raise ErrorExtraccion(f"Se pidieron {len(SERIES)} series y llegaron {len(series_api)}")
-    for (codigo, (nombre, textos)), serie in zip(SERIES.items(), series_api):
+
+    pendientes = dict(SERIES)  # se va vaciando conforme se identifica cada serie
+    nombres_en_orden = []
+    for serie in series_api:
         nombre_oficial = serie.get("name", "")
-        faltan = [t for t in textos if t.lower() not in nombre_oficial.lower()]
-        if faltan:
-            raise ErrorExtraccion(f"{codigo}: el nombre recibido {nombre_oficial!r} "
-                                  f"no contiene {faltan}")
-        registrar(f"{codigo} -> {nombre}: {nombre_oficial}", log)
+        coincidencias = [codigo for codigo, (_, textos) in pendientes.items()
+                         if all(t.lower() in nombre_oficial.lower() for t in textos)]
+        if len(coincidencias) != 1:
+            raise ErrorExtraccion(f"El nombre {nombre_oficial!r} coincide con "
+                                  f"{len(coincidencias)} series esperadas {coincidencias}: "
+                                  f"no se puede identificar sin ambigüedad")
+        codigo = coincidencias[0]
+        nombre_final = pendientes.pop(codigo)[0]
+        nombres_en_orden.append(nombre_final)
+        registrar(f"{codigo} -> {nombre_final}: {nombre_oficial}", log)
+    return nombres_en_orden
 
 
-def construir_tabla(datos):
+def construir_tabla(datos, nombres_en_orden):
     """Pasa el JSON a tabla. Los valores se copian como texto, sin convertir ni redondear."""
-    nombres = [nombre for nombre, _ in SERIES.values()]
     filas = []
     for periodo in datos["periods"]:
         valores = periodo.get("values", [])
@@ -168,13 +181,15 @@ def construir_tabla(datos):
                                   f"{len(valores)} valores en lugar de {len(SERIES)}")
         fila = {"periodo_bcrp": periodo.get("name"),
                 "fecha": convertir_fecha(periodo.get("name"))}
-        fila.update(zip(nombres, valores))
+        fila.update(zip(nombres_en_orden, valores))  # cada valor con su serie identificada
         filas.append(fila)
 
-    tabla = pd.DataFrame(filas, dtype=str)
+    # Las columnas se ordenan siempre igual, sin importar el orden de la API.
+    columnas = ["periodo_bcrp", "fecha"] + [nombre for nombre, _ in SERIES.values()]
+    tabla = pd.DataFrame(filas, dtype=str)[columnas]
     if tabla["fecha"].duplicated().any():
         raise ErrorExtraccion("Hay meses repetidos en la respuesta")
-    for nombre in nombres:
+    for nombre, _ in SERIES.values():
         if pd.to_numeric(tabla[nombre], errors="coerce").isna().all():
             raise ErrorExtraccion(f"La serie {nombre} llegó vacía (ningún valor numérico)")
     return tabla
@@ -234,8 +249,8 @@ def main():
     try:
         respuesta = descargar(url, log)
         datos = leer_json(respuesta.text)
-        validar_series(datos, log)
-        tabla = construir_tabla(datos)
+        nombres_en_orden = emparejar_series(datos, log)
+        tabla = construir_tabla(datos, nombres_en_orden)
         advertencias = revisar_calidad(tabla)
 
         # Solo se guarda cuando todas las validaciones críticas pasaron.
