@@ -1,7 +1,7 @@
 # Autor: Santiago Piero Camayo Jiménez
 # Código de matrícula: 2024200488G
 # Tema N.º 1: Traspaso (pass-through) de la tasa de referencia del BCRP a las tasas del sistema financiero
-# Fecha de extracción: AAAA-MM-DD  (reemplazar por la fecha de la ejecución oficial)
+# Fecha de extracción: 2026-09-24   
 """
 01_extraccion_api.py - Etapa 1: extracción automatizada desde la API de BCRPData.
 

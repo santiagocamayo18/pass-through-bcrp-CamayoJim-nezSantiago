@@ -1,0 +1,15 @@
+[2026-09-24 01:49:17] ===== INICIO DE EXTRACCIÓN (01_extraccion_api.py) =====
+[2026-09-24 01:49:17] Endpoint: https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PD04722MM-PN07819NM-PN07807NM-PN07816NM/json/2003-9/2025-12/esp
+[2026-09-24 01:49:17] Periodo solicitado: 2003-09 a 2025-12
+[2026-09-24 01:49:17] Códigos consultados: PD04722MM, PN07819NM, PN07807NM, PN07816NM
+[2026-09-24 01:49:18] Intento 1: código HTTP 200
+[2026-09-24 01:49:18] PD04722MM -> tasa_referencia: Tasas de interés del Banco Central de Reserva - Tasa de Referencia de la Política Monetaria
+[2026-09-24 01:49:18] PN07807NM -> tamn: Tasas de interés activas y pasivas promedio de las empresas bancarias en MN (términos efectivos anuales) - Activas - TAMN
+[2026-09-24 01:49:18] PN07816NM -> tipmn: Tasas de interés activas y pasivas promedio de las empresas bancarias en MN (términos efectivos anuales) - Pasivas - TIPMN
+[2026-09-24 01:49:18] PN07819NM -> tasa_interbancaria: Tasas de interés activas y pasivas promedio de las empresas bancarias en MN (términos efectivos anuales) - Tasa Interbancaria Promedio
+[2026-09-24 01:49:18] Filas: 268 | Columnas: 6 ['periodo_bcrp', 'fecha', 'tasa_referencia', 'tasa_interbancaria', 'tamn', 'tipmn']
+[2026-09-24 01:49:18] Rango obtenido: 2003-09 a 2025-12
+[2026-09-24 01:49:18] Guardado: datos_crudos\datos_crudos_2024200488G.json (SHA-256 0f2c460a296672d2a9846fdf97640f40738cc40a2912683a0874c210ceb794b7)
+[2026-09-24 01:49:18] Guardado: datos_crudos\datos_crudos_2024200488G.csv (SHA-256 8ef6d7c4219a7297dba58890f61ce5caa46c72c411d78f7bbf9ce39323b359d1)
+[2026-09-24 01:49:18] ===== FIN. Estado: OK =====
+
