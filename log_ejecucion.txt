@@ -13,3 +13,24 @@
 [2026-09-24 01:49:18] Guardado: datos_crudos\datos_crudos_2024200488G.csv (SHA-256 8ef6d7c4219a7297dba58890f61ce5caa46c72c411d78f7bbf9ce39323b359d1)
 [2026-09-24 01:49:18] ===== FIN. Estado: OK =====
 
+[2026-09-24 14:15:09] ===== INICIO DE LIMPIEZA (03_limpieza_datos.py) =====
+[2026-09-24 14:15:09] Llave común: fecha (AAAA-MM). Fuente única: API de BCRPData (Unidad I), por lo que no corresponde unión entre fuentes
+[2026-09-24 14:15:09] Crudo leído: datos_crudos\datos_crudos_2024200488G.csv (268 filas, SHA-256 8ef6d7c4219a7297dba58890f61ce5caa46c72c411d78f7bbf9ce39323b359d1)
+[2026-09-24 14:15:09] Tipificación: 4 series convertidas a número, sin valores perdidos
+[2026-09-24 14:15:09] Integridad: 268 meses continuos de 2003-09 a 2025-12, sin duplicados ni huecos
+[2026-09-24 14:15:09] Rango tasa_referencia: min 0.25 (2020-04) | max 7.75 (2023-01) | media 3.79
+[2026-09-24 14:15:09] Rango tasa_interbancaria: min 0.11 (2020-09) | max 7.76 (2023-02) | media 3.80
+[2026-09-24 14:15:09] Rango tamn: min 10.49 (2021-09) | max 26.28 (2005-01) | media 17.94
+[2026-09-24 14:15:09] Rango tipmn: min 0.76 (2021-08) | max 4.08 (2009-02) | media 2.47
+[2026-09-24 14:15:09] Coherencia: TAMN > TIPMN en todos los meses
+[2026-09-24 14:15:09] Outliers tasa_referencia: 7 variaciones fuera de 3 desviaciones (limite 0.69 pp). Se conservan: ['2009-04 (-1.00)', '2009-05 (-1.00)', '2009-06 (-1.00)', '2009-07 (-1.00)', '2009-08 (-0.75)', '2020-03 (-1.00)']
+[2026-09-24 14:15:09] Outliers tasa_interbancaria: 7 variaciones fuera de 3 desviaciones (limite 0.71 pp). Se conservan: ['2009-04 (-0.74)', '2009-05 (-1.06)', '2009-06 (-1.13)', '2009-07 (-0.89)', '2009-08 (-0.91)', '2020-04 (-1.22)']
+[2026-09-24 14:15:09] Outliers tamn: 5 variaciones fuera de 3 desviaciones (limite 0.93 pp). Se conservan: ['2004-01 (+1.40)', '2005-01 (+0.92)', '2005-10 (-0.98)', '2008-01 (+0.97)', '2009-05 (-1.24)']
+[2026-09-24 14:15:09] Outliers tipmn: 5 variaciones fuera de 3 desviaciones (limite 0.29 pp). Se conservan: ['2006-04 (+0.29)', '2009-05 (-0.36)', '2009-06 (-0.34)', '2009-07 (-0.40)', '2009-08 (-0.33)']
+[2026-09-24 14:15:09] Derivada spread_activo = tamn - tasa_referencia | media 14.15 pp | min 6.44 | max 23.28
+[2026-09-24 14:15:09] Derivada spread_pasivo = tipmn - tasa_referencia | media -1.31 pp | min -4.58 | max 1.70
+[2026-09-24 14:15:09] Filas: 268 | Columnas: 7 ['fecha', 'tasa_referencia', 'tasa_interbancaria', 'tamn', 'tipmn', 'spread_activo', 'spread_pasivo'] (6 sustantivas)
+[2026-09-24 14:15:09] Guardado: datos_procesados\datos_procesados_2024200488G.csv (SHA-256 9c4c2ad49d6a69795121e0a6ef74510591b3a09c54095653f296b1da7399ae91)
+[2026-09-24 14:15:09] HASH PARA EL README (archivo procesado): 9c4c2ad49d6a69795121e0a6ef74510591b3a09c54095653f296b1da7399ae91
+[2026-09-24 14:15:09] ===== FIN. Estado: OK =====
+
