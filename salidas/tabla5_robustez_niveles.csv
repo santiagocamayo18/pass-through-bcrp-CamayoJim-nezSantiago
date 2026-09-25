@@ -1,0 +1,4 @@
+Variable,Traspaso inmediato,Persistencia (c),Traspaso largo plazo,Válido según ADF,N
+Tasa interbancaria,0.741,0.264,1.006,Sí,267
+TAMN (activa),0.033,0.994,5.37,No (serie no estacionaria),267
+TIPMN (pasiva),0.05,0.897,0.483,Sí,267

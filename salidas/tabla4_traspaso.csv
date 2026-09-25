@@ -1,0 +1,4 @@
+Variable,Traspaso inmediato,Error estándar,Traspaso largo plazo,p-valor H0: traspaso completo,Conclusión,Meses hasta 50%,R2,p-valor autocorrelación,N
+Tasa interbancaria,0.631,0.053,1.02,0.2344,Completo,0,0.856,0.0,265
+TAMN (activa),0.192,0.103,0.459,0.0,Incompleto,1,0.15,0.6176,265
+TIPMN (pasiva),0.082,0.023,0.393,0.0,Incompleto,1,0.673,0.0003,265

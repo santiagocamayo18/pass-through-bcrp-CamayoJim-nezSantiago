@@ -1,0 +1,4 @@
+Variable,Constante,Traspaso largo plazo,Error estándar,R2,p-valor Engle-Granger,Conclusión
+Tasa interbancaria,0.005,1.002,0.004,0.995,0.0,Cointegradas
+TAMN (activa),16.469,0.387,0.148,0.025,0.524,Sin cointegración
+TIPMN (pasiva),1.245,0.324,0.015,0.641,0.2928,Sin cointegración

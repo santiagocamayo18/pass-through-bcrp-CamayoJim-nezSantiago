@@ -34,3 +34,89 @@
 [2026-09-24 14:15:09] HASH PARA EL README (archivo procesado): 9c4c2ad49d6a69795121e0a6ef74510591b3a09c54095653f296b1da7399ae91
 [2026-09-24 14:15:09] ===== FIN. Estado: OK =====
 
+[2026-09-24 21:18:37] ===== INICIO DE ANÁLISIS - FASE 1 (04_analisis.py) =====
+[2026-09-24 21:18:37] Procesado leído: 268 meses de 2003-09 a 2025-12
+[2026-09-24 21:18:38] Figura guardada: salidas\fig1_series.png
+[2026-09-24 21:18:38] Figura guardada: salidas\fig2_spreads.png
+[2026-09-24 21:18:38] Tabla guardada: salidas\tabla1_descriptivas.csv
+[2026-09-24 21:18:38] Tabla guardada: salidas\tabla2_raiz_unitaria.csv
+[2026-09-24 21:18:38] ADF Tasa de referencia BCRP (Nivel): p=0.0068 -> Estacionaria
+[2026-09-24 21:18:38] ADF Tasa de referencia BCRP (Primera diferencia): p=0.0001 -> Estacionaria
+[2026-09-24 21:18:38] ADF Tasa interbancaria (Nivel): p=0.0152 -> Estacionaria
+[2026-09-24 21:18:38] ADF Tasa interbancaria (Primera diferencia): p=0.0 -> Estacionaria
+[2026-09-24 21:18:38] ADF TAMN (activa) (Nivel): p=0.2723 -> No estacionaria
+[2026-09-24 21:18:38] ADF TAMN (activa) (Primera diferencia): p=0.0001 -> Estacionaria
+[2026-09-24 21:18:38] ADF TIPMN (pasiva) (Nivel): p=0.0011 -> Estacionaria
+[2026-09-24 21:18:38] ADF TIPMN (pasiva) (Primera diferencia): p=0.0002 -> Estacionaria
+[2026-09-24 21:18:38] Largo plazo Tasa interbancaria: beta=1.002 | Engle-Granger p=0.0000 -> cointegradas
+[2026-09-24 21:18:38] Largo plazo TAMN (activa): beta=0.387 | Engle-Granger p=0.5240 -> SIN cointegración
+[2026-09-24 21:18:38] Largo plazo TIPMN (pasiva): beta=0.324 | Engle-Granger p=0.2928 -> SIN cointegración
+[2026-09-24 21:18:38] Tabla guardada: salidas\tabla3_cointegracion.csv
+[2026-09-24 21:18:38] Resumen: 1 de 3 tasas cointegradas con la tasa de referencia al 5%
+[2026-09-24 21:18:38] ===== FIN. Estado: OK =====
+
+[2026-09-25 08:36:58] ===== INICIO DE ANÁLISIS (04_analisis.py) =====
+[2026-09-25 08:36:58] Procesado leído: 268 meses de 2003-09 a 2025-12
+[2026-09-25 08:36:59] Figura guardada: salidas\fig1_series.png
+[2026-09-25 08:36:59] Figura guardada: salidas\fig2_spreads.png
+[2026-09-25 08:36:59] Tabla guardada: salidas\tabla1_descriptivas.csv
+[2026-09-25 08:36:59] Tabla guardada: salidas\tabla2_raiz_unitaria.csv
+[2026-09-25 08:36:59] ADF Tasa de referencia BCRP (Nivel): p=0.0068 -> Estacionaria
+[2026-09-25 08:36:59] ADF Tasa de referencia BCRP (Primera diferencia): p=0.0001 -> Estacionaria
+[2026-09-25 08:36:59] ADF Tasa interbancaria (Nivel): p=0.0152 -> Estacionaria
+[2026-09-25 08:36:59] ADF Tasa interbancaria (Primera diferencia): p=0.0 -> Estacionaria
+[2026-09-25 08:36:59] ADF TAMN (activa) (Nivel): p=0.2723 -> No estacionaria
+[2026-09-25 08:36:59] ADF TAMN (activa) (Primera diferencia): p=0.0001 -> Estacionaria
+[2026-09-25 08:36:59] ADF TIPMN (pasiva) (Nivel): p=0.0011 -> Estacionaria
+[2026-09-25 08:36:59] ADF TIPMN (pasiva) (Primera diferencia): p=0.0002 -> Estacionaria
+[2026-09-25 08:36:59] Largo plazo Tasa interbancaria: beta=1.002 | Engle-Granger p=0.0000 -> cointegradas
+[2026-09-25 08:36:59] Largo plazo TAMN (activa): beta=0.387 | Engle-Granger p=0.5240 -> SIN cointegración
+[2026-09-25 08:36:59] Largo plazo TIPMN (pasiva): beta=0.324 | Engle-Granger p=0.2928 -> SIN cointegración
+[2026-09-25 08:36:59] Tabla guardada: salidas\tabla3_cointegracion.csv
+[2026-09-25 08:36:59] Diagnóstico: 1 de 3 tasas cointegradas con la tasa de referencia al 5%
+[2026-09-25 08:36:59] Ajuste parcial Tasa interbancaria: inmediato=0.741 | largo plazo=1.006 | velocidad=0.736 | mitad del ajuste en 0.5 meses
+[2026-09-25 08:36:59] ADVERTENCIA: Tasa interbancaria presenta autocorrelación residual (p=0.0); los errores estándar robustos ya la consideran
+[2026-09-25 08:36:59] Ajuste parcial TAMN (activa): inmediato=0.033 | largo plazo=5.37 | velocidad=0.006 | mitad del ajuste en 112.5 meses
+[2026-09-25 08:36:59] ADVERTENCIA: TAMN (activa) presenta autocorrelación residual (p=0.0002); los errores estándar robustos ya la consideran
+[2026-09-25 08:36:59] Ajuste parcial TIPMN (pasiva): inmediato=0.05 | largo plazo=0.483 | velocidad=0.103 | mitad del ajuste en 6.4 meses
+[2026-09-25 08:36:59] ADVERTENCIA: TIPMN (pasiva) presenta autocorrelación residual (p=0.0); los errores estándar robustos ya la consideran
+[2026-09-25 08:36:59] Tabla guardada: salidas\tabla4_ajuste_parcial.csv
+[2026-09-25 08:36:59] Robustez en variaciones Tasa interbancaria: inmediato=0.786 | acumulado=0.956
+[2026-09-25 08:36:59] Robustez en variaciones TAMN (activa): inmediato=0.31 | acumulado=0.409
+[2026-09-25 08:36:59] Robustez en variaciones TIPMN (pasiva): inmediato=0.16 | acumulado=0.335
+[2026-09-25 08:36:59] Tabla guardada: salidas\tabla5_robustez.csv
+[2026-09-25 08:36:59] Figura guardada: salidas\fig3_traspaso.png
+[2026-09-25 08:36:59] ===== FIN. Estado: OK =====
+
+[2026-09-25 11:57:14] ===== INICIO DE ANÁLISIS (04_analisis.py) =====
+[2026-09-25 11:57:14] Procesado leído: 268 meses de 2003-09 a 2025-12
+[2026-09-25 11:57:14] Figura guardada: salidas\fig1_series.png
+[2026-09-25 11:57:14] Figura guardada: salidas\fig2_spreads.png
+[2026-09-25 11:57:14] Tabla guardada: salidas\tabla1_descriptivas.csv
+[2026-09-25 11:57:14] Tabla guardada: salidas\tabla2_raiz_unitaria.csv
+[2026-09-25 11:57:14] ADF Tasa de referencia BCRP (Nivel): p=0.0068 -> Estacionaria
+[2026-09-25 11:57:14] ADF Tasa de referencia BCRP (Primera diferencia): p=0.0001 -> Estacionaria
+[2026-09-25 11:57:14] ADF Tasa interbancaria (Nivel): p=0.0152 -> Estacionaria
+[2026-09-25 11:57:14] ADF Tasa interbancaria (Primera diferencia): p=0.0 -> Estacionaria
+[2026-09-25 11:57:14] ADF TAMN (activa) (Nivel): p=0.2723 -> No estacionaria
+[2026-09-25 11:57:14] ADF TAMN (activa) (Primera diferencia): p=0.0001 -> Estacionaria
+[2026-09-25 11:57:14] ADF TIPMN (pasiva) (Nivel): p=0.0011 -> Estacionaria
+[2026-09-25 11:57:14] ADF TIPMN (pasiva) (Primera diferencia): p=0.0002 -> Estacionaria
+[2026-09-25 11:57:14] Largo plazo Tasa interbancaria: beta=1.002 | Engle-Granger p=0.0000 -> cointegradas
+[2026-09-25 11:57:14] Largo plazo TAMN (activa): beta=0.387 | Engle-Granger p=0.5240 -> SIN cointegración
+[2026-09-25 11:57:14] Largo plazo TIPMN (pasiva): beta=0.324 | Engle-Granger p=0.2928 -> SIN cointegración
+[2026-09-25 11:57:14] Tabla guardada: salidas\tabla3_cointegracion.csv
+[2026-09-25 11:57:14] Diagnóstico: 1 de 3 tasas cointegradas con la tasa de referencia al 5%
+[2026-09-25 11:57:14] Traspaso Tasa interbancaria: inmediato=0.631 | largo plazo=1.02 | H0 completo p=0.2344 -> Completo | 50% en 0 meses
+[2026-09-25 11:57:14] Nota: Tasa interbancaria presenta autocorrelación residual (p=0.0); los errores estándar robustos (Newey-West) la tienen en cuenta
+[2026-09-25 11:57:14] Traspaso TAMN (activa): inmediato=0.192 | largo plazo=0.459 | H0 completo p=0.0 -> Incompleto | 50% en 1 meses
+[2026-09-25 11:57:14] Traspaso TIPMN (pasiva): inmediato=0.082 | largo plazo=0.393 | H0 completo p=0.0 -> Incompleto | 50% en 1 meses
+[2026-09-25 11:57:14] Nota: TIPMN (pasiva) presenta autocorrelación residual (p=0.0003); los errores estándar robustos (Newey-West) la tienen en cuenta
+[2026-09-25 11:57:14] Tabla guardada: salidas\tabla4_traspaso.csv
+[2026-09-25 11:57:14] Robustez en niveles Tasa interbancaria: largo plazo=1.006 (válido)
+[2026-09-25 11:57:14] Robustez en niveles TAMN (activa): largo plazo=5.37 (NO interpretable: serie no estacionaria)
+[2026-09-25 11:57:14] Robustez en niveles TIPMN (pasiva): largo plazo=0.483 (válido)
+[2026-09-25 11:57:14] Tabla guardada: salidas\tabla5_robustez_niveles.csv
+[2026-09-25 11:57:15] Figura guardada: salidas\fig3_traspaso.png
+[2026-09-25 11:57:15] ===== FIN. Estado: OK =====
+

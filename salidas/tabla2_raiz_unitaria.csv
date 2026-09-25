@@ -1,0 +1,9 @@
+Variable,Transformación,Estadístico ADF,p-valor,Rezagos,N,Conclusión
+Tasa de referencia BCRP,Nivel,-3.551,0.0068,6,261,Estacionaria
+Tasa de referencia BCRP,Primera diferencia,-4.78,0.0001,4,262,Estacionaria
+Tasa interbancaria,Nivel,-3.293,0.0152,2,265,Estacionaria
+Tasa interbancaria,Primera diferencia,-5.378,0.0,1,265,Estacionaria
+TAMN (activa),Nivel,-2.033,0.2723,6,261,No estacionaria
+TAMN (activa),Primera diferencia,-4.667,0.0001,5,261,Estacionaria
+TIPMN (pasiva),Nivel,-4.07,0.0011,3,264,Estacionaria
+TIPMN (pasiva),Primera diferencia,-4.524,0.0002,9,257,Estacionaria
